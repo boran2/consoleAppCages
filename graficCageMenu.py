@@ -1,7 +1,9 @@
 import os
+from pickle import TRUE
 from cageDetail import CageDetail
 from const import Constants
 from linearCodeMenu import LinearCodeMenu
+from automorphismMenu import AutomorphismMenu
 
 class graphicCageMenu:
     
@@ -15,7 +17,7 @@ class graphicCageMenu:
     def display_title_bar(self):
         os.system(self.const.CLEAR)     
         print("\t********************************************************")
-        print("\t******               "+self.const.CAGE+" ("+str(self.k) +","+str(self.g) +") "+self.const.MENU+"              ******")
+        print("\t******               "+self.const.CAGE+"("+str(self.k) +","+str(self.g) +") "+self.const.MENU+"              ******")
         print("\t********************************************************")
         
     # zoznam moznosti v menu
@@ -24,7 +26,9 @@ class graphicCageMenu:
         print("\t  [2] " + self.const.SHOW_H)
         print("\t  [3] " + self.const.SAVE_H)
         print("\t  [4] " + self.const.SHOW_CAGE_DATA)
-        print("\t  [5] " + self.const.SHOW_MENU)
+        print("\t  [5] " + self.const.AUT_GROUP_CAGE)
+        print("\t  [6] " + self.const.SHOW_MENU  + " " + self.const.FROM_CAGE)
+        print("\t  ")
         print("\t  [x] " + self.const.BACK_TO_SHOWABLE_CAGES)   
         return input()
 
@@ -43,7 +47,9 @@ class graphicCageMenu:
                 CageDetail(self.k,self.g).saveParityCheckMatrix()
             elif choice == '4':
                 CageDetail(self.k,self.g).showCageData()
-            elif choice == '5':   
+            elif choice == '5':
+                AutomorphismMenu(self.k,self.g,TRUE).create()
+            elif choice == '6':
                 LinearCodeMenu(self.k,self.g).create()
             elif choice == 'x':
                 break

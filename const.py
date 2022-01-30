@@ -9,6 +9,7 @@ class Constants:
     CAGE_64 = "Cage (6,4)"
     CAGE = "Cage"
     DETAIL = "detail"
+    BIG_DETAIL = "Detail"
     BACK_TO_CAGE_DETAILS = "Naspäť na menu klietky"
     INCIDENCE_MATRIX = "Incidencna matica klietky, Kontrolna matica H:"
     MOORE_BOUND = "Moorove ohranicenie pre klietku M = "
@@ -59,3 +60,9 @@ class Constants:
     N = 'Dlžka lineárneho kódu n = '
     N_CODEWORDS = 'Pocet slov zakodovanych v kode m = '
     P_PAR = 'Parameter perfektneho kodu p = '
+    AUTOMORPHISM = 'Automorfizmus'
+    BACK_TO_AUTGROUP = 'Naspäť na grupu automorfizmov klietky'
+    AUT_GROUP = 'Grupa automorfizmov'
+    BACK_TO = 'Naspäť na'
+    AUT_GROUP_CAGE = 'Zobraz grupu automorfizmov klietky'
+    FROM_CAGE = 'z klietky'

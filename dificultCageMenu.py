@@ -1,4 +1,6 @@
 import os
+from pickle import FALSE
+from automorphismMenu import AutomorphismMenu
 from cageDetail import CageDetail
 from const import Constants
 from linearCodeMenu import LinearCodeMenu
@@ -23,7 +25,9 @@ class dificultCageMenu:
         print("\t  [1] " + self.const.SHOW_H)
         print("\t  [2] " + self.const.SAVE_H)
         print("\t  [3] " + self.const.SHOW_CAGE_DATA)
-        print("\t  [4] " +self.const.SHOW_MENU)
+        print("\t  [4] " + self.const.AUT_GROUP_CAGE)
+        print("\t  [5] " +self.const.SHOW_MENU + " " + self.const.FROM_CAGE)
+        print("\t  ")
         print("\t  [x] " + self.const.BACK_TO_NO_SHOWABLE_CAGES)   
         return input()
 
@@ -41,6 +45,8 @@ class dificultCageMenu:
             elif choice == '3':
                 CageDetail(self.k,self.g).showCageData()
             elif choice == '4':
+                AutomorphismMenu(self.k,self.g, FALSE).create()
+            elif choice == '5':
                 LinearCodeMenu(self.k,self.g).create()
             elif choice == 'x':
                 break

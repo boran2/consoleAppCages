@@ -29,6 +29,7 @@ class DifficultCagesMenu:
         print("\t  [12] "+self.const.CAGE+"(11,5)")
         print("\t  [13] "+self.const.CAGE+"(12,5)")
         print("\t  [14] "+self.const.CAGE+"(13,5)")
+        print("\t  ")
         print("\t  [x] " + self.const.BACK_TO_CAGE_CATEGORIES)   
         return input()
 
