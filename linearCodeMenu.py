@@ -16,7 +16,7 @@ class LinearCodeMenu:
         os.system(self.const.CLEAR)
                 
         print("\t********************************************************")
-        print("\t******       "+self.const.C_DETAIL+" - "+self.const.CAGE+" ("+str(self.k)+","+str(self.g)+")        ******")
+        print("\t******     "+self.const.C_DETAIL+" - "+self.const.CAGE+" ("+str(self.k)+","+str(self.g)+")      ******")
         print("\t********************************************************")
         
     # zoznam moznosti v menu
@@ -29,6 +29,7 @@ class LinearCodeMenu:
         print("\t  [6] " + self.const.NUMBER_CODEWORDS)
         print("\t  [7] " +self.const.MIN_HAMMING)
         print("\t  [8] " + self.const.P_C)
+        print("\t  ")
         print("\t  [x] " +self.const.BACK_TO_CAGES)   
         return input()
 

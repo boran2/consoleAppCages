@@ -26,6 +26,7 @@ class GraphicCagesMenu:
         print("\t  [10] "+self.const.CAGE+"(4,9)")
         print("\t  [11] "+self.const.CAGE+"(6,4)")
         print("\t  [12] "+self.const.CAGE+"(7,5)")
+        print("\t  ")
         print("\t  [x] " + self.const.BACK_TO_CAGE_CATEGORIES)
         return input()
 

@@ -48,7 +48,30 @@ class Cage:
         if (self.cageVerification(cage) == False):
            print(self.const.NO_CAGE + "\n")
            return
+        cage = self.setNonZeroVerticesLabels(cage)
         return cage
+
+    # nastavi vrcholy od 1 po pocet vrcholov pre danu klietku
+    def setNonZeroVerticesLabels(self, cage):
+        vertices = []
+        for vertex in range(len(cage.vertices(sort=False))):
+            vertices.append(vertex + 1)
+        cage.relabel(vertices)
+        return cage
+
+    # vrati zoznam automorfizmov
+    def getPermutationsOfAutomorphisms(self, cage):
+        vertices = cage.vertices()
+        automorphismGroup = cage.automorphism_group().list()
+        permutations = []
+        for i in range(len(automorphismGroup)):
+                if i > 0:
+                    automorphism = str(automorphismGroup[i])
+                    for vertex in vertices:
+                        if str(vertex) not in automorphism:
+                            automorphism += '(' + str(vertex) + ')';
+                    permutations.append(str(automorphism))
+        return permutations
 
     # vypocita najmensi mozny pocet vrcholov pre potencionalnu klietku (testovacie data)
     def calculateMooreBound(self):

@@ -17,7 +17,7 @@ class LinearCode:
         os.system(self.const.CLEAR)
                 
         print("\t********************************************************")
-        print("\t******      "+self.const.LINEAR_CODE_MENU+" - "+self.const.CAGE+"("+str(self.k)+","+str(self.g)+")       ******")
+        print("\t******       "+self.const.LINEAR_CODE_MENU+" - "+self.const.CAGE+"("+str(self.k)+","+str(self.g)+")       ******")
         print("\t********************************************************")
     
     # zoznam moznosti v menu
