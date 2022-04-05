@@ -1,4 +1,4 @@
-from const import Constants
+from Constants import Constants
 from sage.all import *
 
 class Cage:
@@ -21,7 +21,7 @@ class Cage:
             print("\n")
             print( self.const.CAGE_NON_EXIST+"\n")
             return
-        cage = graphs.EmptyGraph();
+        cage = graphs.EmptyGraph()
         if cageInput in sageCages:
             if self.k == 3:
                 if self.g == 5:
@@ -59,7 +59,7 @@ class Cage:
         cage.relabel(vertices)
         return cage
 
-    # vrati zoznam automorfizmov
+    # vrati doplnený zoznam automorfizmov
     def getPermutationsOfAutomorphisms(self, cage):
         vertices = cage.vertices()
         automorphismGroup = cage.automorphism_group().list()
@@ -69,7 +69,7 @@ class Cage:
                     automorphism = str(automorphismGroup[i])
                     for vertex in vertices:
                         if str(vertex) not in automorphism:
-                            automorphism += '(' + str(vertex) + ')';
+                            automorphism += '(' + str(vertex) + ')'
                     permutations.append(str(automorphism))
         return permutations
 
